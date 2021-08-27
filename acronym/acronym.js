@@ -15,9 +15,6 @@ export const parse = (name) => {
 
   var palavras = retirandoTraço2.split(" ", name.length).filter(x => x);
   var acron = palavras[0][0].toUpperCase();
-  var palavrasE = retirandoTraço2.slice(12);
-  var palEsplit = palavrasE.split(" ")    //transformando as palavras especiais em objetos
-  var acron1 = palavrasE[0][0].toUpperCase();
   console.log(palavras)
 
  
@@ -32,7 +29,7 @@ export const parse = (name) => {
   return acron;
 };
   
-
+//retirando variáveis desnecessárias
 
 
 
