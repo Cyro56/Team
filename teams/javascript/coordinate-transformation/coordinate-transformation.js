@@ -43,9 +43,10 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  
-  
-  return (x, y) => g(...f(x, y));
+  return function(x,y){
+    let [x1,y1] = f(x,y);
+    return g(x1, y1);
+  }  
 }
 
 /**
@@ -63,7 +64,7 @@ export function memoizeTransform(f) {
 
 
  
-  return (x,y) => 
+  return function (x,y)  
   {if(guard[0] == x && guard[1] == y){
     return LastRes
   }

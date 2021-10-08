@@ -37,7 +37,7 @@ if(planeta == "neptune"){
  
 }
 var anosPlaneta = (segundosTotais/(anosDaTerraEmSegundos))/factor; // Indicando quantos anos terrestres
-  return parseFloat(anosPlaneta.toFixed(2)); //retornando os anos terrestres
+ return (parseFloat(anosPlaneta.toFixed(2))); //retornando os anos terrestres
 
 };
 
